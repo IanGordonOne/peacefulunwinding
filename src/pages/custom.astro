@@ -1,0 +1,410 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Shannon Freed | Transform Conflict Today">
+  <header class="hero">
+    <h1>SHANNON FREED</h1>
+    <p>COMMUNICATIONS CONSULTANT</p>
+  </header>
+
+  <main>
+    <article class="about">
+      <img
+        src="/couple.jpg"
+        alt="Watercolor illustration of two people embracing"
+        width="1273"
+        height="1204"
+      />
+      <div>
+        <h2>About Shannon</h2>
+        <p>
+          With a varied background in conflict resolution and family support, I
+          bring a unique blend of expertise to every interaction. My educational
+          journey includes a Bachelor of Science in Human Development and
+          Family Studies and a Master's degree in Lakota Leadership and
+          Management. These experiences have equipped me with both
+          foundational knowledge and culturally informed leadership skills.
+        </p>
+        <p>
+          My professional experience includes communication training, corporate
+          and non-profit management, and direct, one-on-one family work. My
+          background enables me to adeptly manage and train teams while also
+          offering compassionate, effective support to families navigating conflict.
+          My goal is to foster understanding and resolution through a combination
+          of strategic insight and empathetic guidance.
+        </p>
+      </div>
+    </article>
+
+    <section class="services">
+      <div>
+        <h2>What I can help with</h2>
+        <ul>
+          <li>Support to help division of possessions and distribution of non-financial assets in a safe environment.</li>
+          <li>Provide professional facilitation, to guide your process and to ensure clear, calm communication.</li>
+          <li>Help families manage disagreements and communicate effectively. Facilitate amicable and streamlined separation process.</li>
+          <li>Minimize emotional stress and promote mutually beneficial outcomes during a challenging time.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Pricing</h2>
+        <dl class="pricing">
+          <dt><button aria-expanded="false">INTRODUCTORY PACKAGE: $110*</button></dt>
+          <dd>This comprehensive introductory package begins with a 15 min phone consult. Our in-person meeting can last up to 2 hours.</dd>
+
+          <dt><button aria-expanded="false">CONFLICT RESOLUTION COACHING: $200</button></dt>
+          <dd>Tailored guidance to help parties manage disagreements and communicate effectively. This package includes 3 hours of support. Time may be scheduled in 1 hour sessions via zoom or longer and can occur with both parties present or split as individual sessions.</dd>
+
+          <dt><button aria-expanded="false">ADD-ON HOUR: $75</button></dt>
+          <dd>Add time in 1 hour increments to any package.</dd>
+        </dl>
+        <small>*New Clients Only</small>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <p class="brand">neurodiverse.community</p>
+        <p>Are you ready to take action?</p>
+        <address>
+          <strong>CONTACT US</strong><br>
+          <a href="tel:+14088594624">408-859-4624</a><br>
+          <a href="mailto:SHANNON@NEURODIVERSE.COMMUNITY">SHANNON@NEURODIVERSE.COMMUNITY</a>
+        </address>
+      </div>
+
+      <div>
+        <p>Sign up with your email address to receive news and updates.</p>
+        <form action="#" method="POST">
+          <label for="email" class="visually-hidden">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Email Address" required>
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+    </div>
+    <small>&copy; <a href="https://neurodiverse.community">neurodiverse.community</a> 2025</small>
+  </footer>
+</Layout>
+
+<style>
+  /* Utility */
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+
+  /* Header/Hero */
+  .hero {
+    padding: 3rem 2rem 2rem;
+    text-align: center;
+    background: var(--color-cream);
+    border-top: 10px solid var(--color-navy-dark);
+  }
+
+  .hero h1 {
+    font-family: 'Gilda Display', Georgia, serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.056;
+    margin-bottom: 1.25rem;
+    color: rgb(40, 52, 123);
+  }
+
+  .hero > p {
+    font-family: 'PT Serif', Georgia, serif;
+    font-size: clamp(0.9rem, 1.5vw, 1.35rem);
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    color: rgb(40, 52, 123);
+    text-transform: uppercase;
+  }
+
+  /* About */
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 4vw;
+    position: relative;
+  }
+
+  .about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    background: #fff;
+    border-bottom: 1px solid rgba(59, 77, 124, 0.15);
+    z-index: -1;
+  }
+
+  .about img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    justify-self: center;
+  }
+
+  .about h2 {
+    font-size: 2.1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .about p {
+    margin-bottom: 1.1rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  /* Services */
+  .services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 4vw 8rem;
+    background: var(--color-cream);
+  }
+
+  .services h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .services ul {
+    list-style: none;
+    max-width: 380px;
+  }
+
+  .services li {
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  /* Pricing accordion */
+  .pricing {
+    border-top: 1px solid var(--color-dark-accent);
+    max-width: 320px;
+  }
+
+  .pricing dt {
+    border-bottom: 1px solid var(--color-dark-accent);
+  }
+
+  .pricing button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.15rem 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    color: var(--color-dark-accent);
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  .pricing button::after {
+    content: '+';
+    font-size: 1.25rem;
+    transition: transform 0.3s ease;
+  }
+
+  .pricing button[aria-expanded="true"]::after {
+    transform: rotate(45deg);
+  }
+
+  .pricing button:hover {
+    opacity: 0.7;
+  }
+
+  .pricing dd {
+    max-height: 0;
+    overflow: hidden;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.65;
+    transition: max-height 0.3s ease;
+  }
+
+  .pricing dt:has(button[aria-expanded="true"]) + dd {
+    max-height: 200px;
+    padding-bottom: 1rem;
+  }
+
+  .services small {
+    display: block;
+    margin-top: 1.25rem;
+    font-size: 1rem;
+    font-style: italic;
+  }
+
+  /* Footer */
+  footer {
+    background: hsl(201.82, 77.46%, 27.84%);
+    color: hsl(36.92, 28.89%, 91.18%);
+    padding: 3.5rem 4vw 1.5rem;
+  }
+
+  .footer-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  footer .brand {
+    font-size: 1.75rem;
+    font-style: normal;
+    margin-bottom: 1.75rem;
+  }
+
+  footer address {
+    font-style: normal;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  footer address strong {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+  }
+
+  footer address a {
+    color: var(--color-orange);
+  }
+
+  footer address a:hover {
+    color: var(--color-cream);
+  }
+
+  footer form {
+    display: flex;
+    max-width: 320px;
+    margin-top: 1.25rem;
+  }
+
+  footer input {
+    flex: 1;
+    padding: 0.85rem 1rem;
+    border: 1px solid hsla(36.92, 28.89%, 91.18%, 0.35);
+    background: transparent;
+    color: var(--color-cream);
+    font-family: var(--font-body);
+    font-size: 1rem;
+  }
+
+  footer input::placeholder {
+    color: hsla(36.92, 28.89%, 91.18%, 0.55);
+  }
+
+  footer input:focus {
+    outline: none;
+    border-color: var(--color-cream);
+  }
+
+  footer button {
+    padding: 0.85rem 1.35rem;
+    background: var(--color-orange);
+    border: none;
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  footer button:hover {
+    background: hsl(25.15, 97.06%, 35%);
+  }
+
+  footer > small {
+    display: block;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 1.5rem;
+    margin-top: 2.5rem;
+    border-top: 1px solid hsla(36.92, 28.89%, 91.18%, 0.12);
+    font-size: 0.95rem;
+    color: hsla(36.92, 28.89%, 91.18%, 0.7);
+  }
+
+  footer > small a {
+    color: var(--color-cream);
+  }
+
+  footer > small a:hover {
+    color: var(--color-orange);
+  }
+
+  /* Responsive */
+  @media (max-width: 1000px) {
+    .about,
+    .services {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .about img {
+      max-width: 400px;
+    }
+
+    .footer-inner {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hero {
+      padding: 4rem 5vw 1.5rem;
+    }
+
+    footer form {
+      flex-direction: column;
+    }
+
+    footer input,
+    footer button {
+      width: 100%;
+    }
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.pricing button').forEach(button => {
+    button.addEventListener('click', () => {
+      const expanded = button.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.pricing button').forEach(b => b.setAttribute('aria-expanded', 'false'));
+      button.setAttribute('aria-expanded', (!expanded).toString());
+    });
+  });
+</script>

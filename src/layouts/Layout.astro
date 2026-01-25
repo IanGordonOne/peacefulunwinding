@@ -1,0 +1,94 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Shannon Freed - Communications Consultant specializing in conflict resolution, mediation, and family support." } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    /* Exact colors from scraped CSS */
+    /* --lightAccent-hsl: 36.92, 28.89%, 91.18% */
+    --color-cream: hsl(36.92, 28.89%, 91.18%);
+    /* --darkAccent-hsl: 201.82, 77.46%, 27.84% */
+    --color-dark-accent: hsl(201.82, 77.46%, 27.84%);
+    /* --black-hsl: 231.33, 50.92%, 31.96% */
+    --color-navy: hsl(231.33, 50.92%, 31.96%);
+    /* --white-hsl: 25.15, 97.06%, 40% - orange accent */
+    --color-orange: hsl(25.15, 97.06%, 40%);
+
+    --color-navy-dark: hsl(231.33, 50.92%, 22%);
+    --color-text: hsl(231.33, 30%, 35%);
+    --color-text-light: hsl(231.33, 20%, 50%);
+    --color-white: #ffffff;
+
+    --font-heading: 'Gilda Display', Georgia, serif;
+    --font-body: 'PT Serif', Georgia, serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--color-navy);
+    background-color: var(--color-cream);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--color-dark-accent);
+  }
+
+  a {
+    color: var(--color-dark-accent);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: var(--color-navy);
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  ::selection {
+    background: var(--color-navy);
+    color: var(--color-white);
+  }
+</style>
